@@ -1,3 +1,3 @@
 FROM luomoxingkong/jonnyjupyter
 
-RUN conda install -y ta-lib && conda install -y numpy && conda install -y pandas pandas-datareader && conda install -y matplotlib && conda install mplfinance
+RUN conda install -y ta-lib && pip install numpy pandas pandas-datareader matplotlib mplfinance && cd /home/jovyan/ && git clone https://github.com/jonnyhtmso/jonny.git
