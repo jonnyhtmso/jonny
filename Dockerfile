@@ -1,4 +1,8 @@
+FROM aisuko/kaniko-project-executor as kaniko
+
 FROM luomoxingkong/jonnyjupyter
+
+COPY --from=kaniko /kaniko/executor /kaniko/executor
 
 USER jovyan
 
